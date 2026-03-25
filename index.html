@@ -5,31 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnonova | Spin-off UNAL</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px; background-color: #f8f9fa; }
-        header { background: #003893; color: white; padding: 40px; text-align: center; border-radius: 8px; }
-        .logo-img { max-width: 180px; height: auto; margin-bottom: 20px; border-radius: 10px; border: 3px solid white; }
-        section { background: white; margin: 20px 0; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: #003893; border-bottom: 2px solid #003893; padding-bottom: 10px; margin-top: 0; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
-        th, td { padding: 15px; border: 1px solid #dee2e6; text-align: left; vertical-align: top; }
-        th { background-color: #e9ecef; color: #003893; font-weight: bold; }
-        tr:nth-child(even) { background-color: #f8f9fa; }
-        .branding { color: #003893; font-weight: bold; }
+        /* Sincronización con la paleta de colores del logo */
+        :root {
+            --tn-green: #8BC34A; /* Verde del logo */
+            --tn-cyan: #00A3A2;  /* Cian del logo */
+            --tn-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--tn-dark); max-width: 1000px; margin: auto; padding: 20px; background-color: var(--bg-light); }
+        
+        /* Banner Principal */
+        header { 
+            background: linear-gradient(135deg, #4CAF50, var(--tn-cyan)); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-radius: 15px; 
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .logo-header { 
+            max-width: 400px; 
+            height: auto; 
+            background: white; 
+            padding: 15px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Secciones */
+        section { background: white; margin: 20px 0; padding: 35px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--tn-cyan); }
+        h2 { color: var(--tn-cyan); margin-top: 0; }
+        
+        .flex-container { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+        .mini-logo { max-width: 200px; height: auto; border: 1px solid #eee; padding: 10px; border-radius: 10px; }
+
+        /* Tabla de Equipo */
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 15px; border: 1px solid #eee; text-align: left; }
+        th { background-color: var(--tn-cyan); color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .role-title { font-weight: bold; color: var(--tn-cyan); }
+
+        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="tecnonova_logo.png" alt="Logo Tecnonova" class="logo-img">
-        <h1>TECNONOVA</h1>
-        <p><i>"Innovación y Ciencia al Servicio del Futuro"</i></p>
-        <p>Spin-off Científica | Universidad Nacional de Colombia</p>
+        <img src="tecnonova_logo.png" alt="Tecnonova Logo" class="logo-header">
+        <p style="margin-top:20px; font-size: 1.2em;">Spin-off Científica | Universidad Nacional de Colombia</p>
     </header>
 
     <section>
-        <h2>Sobre la Spin-off</h2>
-        <p>En <span class="branding">Tecnonova</span>, nos dedicamos a transformar principios físicos fundamentales en soluciones tecnológicas de alto impacto. Actualmente, nuestro enfoque principal es el desarrollo de motores de corriente continua optimizados mediante la aplicación rigurosa de la <b>Ley de Lorentz</b> </p>
-        <p>Buscamos la eficiencia máxima y la sostenibilidad, integrando componentes de alta calidad como imanes de neodimio para liderar la transición energética desde la academia.</p>
+        <h2>Propuesta Tecnológica</h2>
+        <div class="flex-container">
+            <div style="flex: 1; min-width: 300px;">
+                <p>En <strong>Tecnonova</strong> desarrollamos motores para un futuro sostenible. Nuestra ingeniería se basa en la <b>Ley de Lorentz</b>:</p>
+                <p style="background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; text-align: center;">F = I (L × B)</p>
+                <p>Aplicamos esta ley física para crear sistemas de tracción con eficiencia energética superior, reduciendo la huella de carbono industrial.</p>
+            </div>
+            <img src="tecnonova_logo.png" alt="Producto Tecnonova" class="mini-logo">
+        </div>
     </section>
 
     <section>
@@ -39,36 +77,36 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Cargo</th>
-                    <th>Responsabilidad en la Spin-off</th>
+                    <th>Responsabilidad</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><b>Imara Muñoz</b></td>
-                    <td>CEO (Director Ejecutivo)</td>
-                    <td>Líder del proyecto. Planificación general, cumplimiento de tiempos de entrega y coordinación de la comunicación entre todos los departamentos.</td>
+                    <td class="role-title">CEO</td>
+                    <td>Líder del proyecto. Planificación general y coordinación de departamentos.</td>
                 </tr>
                 <tr>
-                    <td><b>Jhhonatan Nieves</b></td>
-                    <td>Director Científico</td>
-                    <td>Guardián del rigor técnico. Responsable de entender y explicar los principios físicos, asegurando que el prototipo funcione bajo las leyes de la ciencia.</td>
+                    <td><b>Jhonatan Nieves</b></td>
+                    <td class="role-title">Dir. Científico</td>
+                    <td>Guardián del rigor técnico y principios físicos del prototipo.</td>
                 </tr>
                 <tr>
                     <td><b>Lizeth Ortega</b></td>
-                    <td>Directora Financiera</td>
-                    <td>Gestión de recursos. Optimiza el uso de materiales y asegura la viabilidad económica del proyecto con los recursos disponibles.</td>
+                    <td class="role-title">Dir. Financiera</td>
+                    <td>Gestión de recursos y viabilidad económica del proyecto.</td>
                 </tr>
                 <tr>
                     <td><b>Santiago Delgado & Jobanny Torres</b></td>
-                    <td>Directores Creativos</td>
-                    <td>El rostro del proyecto. Diseño estético del prototipo, presentación visual y claridad en la explicación del funcionamiento para que sea atractiva.</td>
+                    <td class="role-title">Dir. Creativos</td>
+                    <td>Diseño estético, presentación visual y claridad comunicativa.</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <footer>
-        <p>© 2026 Tecnonova | Facultad de Ingeniería UNAL Bogotá</p>
+        <p>© 2026 Tecnonova - Motores para un futuro sostenible<br>Facultad de Ingeniería, UNAL Bogotá</p>
     </footer>
 
 </body>
